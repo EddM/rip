@@ -11,7 +11,7 @@ class IPAddress
   end
   
   def to_a
-    @segments.collect { |s| s.to_s(2).pad_binary_string(8) }
+    @segments.collect { |s| s.to_binary_string }
   end
   
   def to_s

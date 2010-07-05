@@ -26,7 +26,7 @@ class IPAddressMask
   end
   
   def to_bin
-    @segments.collect { |s| s.to_s(2).pad_binary_string(8) }.join
+    @segments.collect { |s| s.to_binary_string }.join
   end
   
   def matches?(addr)
